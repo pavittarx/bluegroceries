@@ -1,0 +1,39 @@
+main {
+    background: url('images/pexels-caioresende.jpeg') center/cover no-repeat;
+    display: flex;
+}
+
+.wrapper {
+    display: block;
+    background-color: #fafafa;
+    opacity: 0.8;
+    margin: auto;
+    border: 0.15rem solid #006db3;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    min-width: 12rem;
+}
+
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper input {
+    display: block;
+    margin: 0.5rem;
+    padding: 0.5rem 0.1rem;
+    text-indent: 0.2rem;
+    vertical-align: middle;
+    border: 0.1rem solid #d3d3d3;
+    border-radius: 0.1rem;
+    color: #3956cb;
+    flex: 3 100%;
+}
+
+.wrapper input[type="submit"] {
+    text-indent: 0;
+    padding: 0.2rem 0.5rem;
+    width: 30%;
+}

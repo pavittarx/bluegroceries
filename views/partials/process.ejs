@@ -1,0 +1,30 @@
+
+<. for(i=0;i<order.length;i++){ .>
+<section class="process_wrapper">
+<section class="process_info">
+        <.-prod [i].name .> (#<.=order[i].id .>)
+        <form id="form<.=order[i].id .>" method="post" class="process_form"> 
+        <br/> Quantity
+        <input name="quantity" type="number" min="1" max="<.=prod[i].stock .>" value="<.=order[i].quantity .>" disabled>
+        <br/> <br/> Delivery Address 
+        <br/> 
+        <input name="street" type="text" placeholder="Street" value="<.=address[i].street .>" oninput="resizable('street',7)" disabled>,
+        <input name="block" type="text" placeholder="Block" value="<.=address[i].block .>" oninput="resizable('block',7)" disabled>
+        <br/> <.=address[i].city .> - <.=address[i].zip .> 
+        <div id="err<.=order[i].id .>" class="err"> </div>
+        <button id="inputbtn<.=order[i].id .>" class="btn btn_set" onclick="toggleinput(<.=order[i].id .>,event,0)"> Edit </button>
+        <a class="btn btn_set" href="cancel/<.=order[i].id .>"> Cancel </a>
+        </form>
+        </section>
+
+        <span class="process_image">
+        <img class="p_img" src="<.=prod[i].image .>" />
+        </span>
+</section>
+<. } .>
+<div class="btn_wrapper center"> 
+ <a class="btn" href="/<.=user[0].username .>/checkout">
+  Proceed to Checkout
+  </a> 
+</div>
+       

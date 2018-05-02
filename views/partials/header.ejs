@@ -1,0 +1,32 @@
+<section class="bar">
+        <i class="pchide csr material-icons menu" onclick="toggle(1)"></i>
+        <span id="logo"><a style="color:inherit;" href="/"> Blue Groceries </a></span>
+        <span class="mhide userlinks">
+        <. if(!user){ .>
+            <a href="/login">
+                <i class="material-icons lock"></i> Login </a>
+            <a href="/signup">
+                <i class="material-icons createac"></i> Sign up </a>
+                <.}else{.>
+            <a class="username" href="/<.=user[0].username.>"><i class="material-icons ac"></i> <.=user[0].fName .> <.=user[0].lName .> </a>
+            <a class="username" href="/logout"><i class="material-icons logout"></i> </a>
+            <.}.>
+        </span>
+    </section>
+    <section class="headerspace">
+        <. if(user){ .>
+        <span class="mhide shrink">
+        <a href="/<.=user[0].username .>/cart"> Cart (<.=cart .>) </a>
+        <a href="/<.=user[0].username .>/orders"> My Orders </a>
+        </span>
+        <span class="mhide shrink widedisplay">Everything delivered at your doorstep.</span>
+        <. }else{.>
+        <span class="mhide">
+            <span class="shrink">Everything delivered at your doorstep.</span>
+        </span>
+        <.} .>
+        <form action="/search" method="post">
+            <input name="search" type="text" placeholder="Search">
+            <input class="material-icons" type="submit" value="&#xe8b6">
+        </form>
+    </section>

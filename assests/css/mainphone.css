@@ -1,0 +1,255 @@
+html {
+    font-size: 16px;
+}
+
+.mhide {
+    display: none;
+}
+
+
+/* Header Exclusive CSS Styles */
+
+header {
+    padding-bottom: 0.2rem;
+    /* border-bottom: 0.3rem solid #1976d2aa; */
+    box-shadow: 0 0.1rem 0.1rem -0.1rem #454545;
+}
+
+.bar {
+    padding: 1rem;
+    text-align: center;
+}
+
+.bar i {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0.8rem;
+    top: 0.7rem;
+    z-index: 0;
+}
+
+.headerspace {
+    margin: 0.3rem 0.7rem;
+    display: block;
+}
+
+.headerspace form {
+    text-align: center;
+}
+
+.headerspace input {
+    padding: 0.2rem;
+}
+
+
+/*  Navigation/SideBar Exclusive CSS Styling */
+
+#sidebar {
+    background-color: #ffffff;
+    height: 100%;
+    width: 80%;
+    max-width: 15rem;
+    box-shadow: 0.1rem 0 0.2rem 0.1rem #467281c0;
+    transform: translateX(-120%);
+    transition: 0.5s transform linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.barlogo {
+    /* Logo Container in Sidebar (Mobile Only)*/
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.barlogo i {
+    position: absolute;
+    right: 1rem;
+    top: 0.6rem;
+}
+
+.navlinks {
+    /* Links Container in the Sidebar */
+    margin: 2rem 0;
+}
+
+.navlinks a {
+    margin: 0 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    display: block;
+}
+
+.navlinks a:first-child {
+    margin-bottom: 0.3rem;
+}
+
+.userinfo {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.categories {
+    /* Catgory Styles in Sidebar */
+    width: 80%;
+    margin: 2rem 1.5rem;
+}
+
+.categories a {
+    padding: 0.5rem;
+    border-top: 0.09rem solid #1976d2;
+    display: block;
+    text-indent: 0.5rem;
+}
+
+.categories a:hover {
+    background-color: #1976d2;
+    color: #fff;
+}
+
+
+/* Product Cards Exclusive CSS Styles - for Mobile*/
+
+.pwrapper {
+    /* Wrapper around Product Cards */
+    flex-direction: column;
+    align-items: center;
+}
+
+.pwrapper>* {
+    flex: 1;
+    margin: 1rem 0;
+}
+
+.prodcard {
+    border: 0;
+    box-shadow: 0 0.05rem 0.2rem 0.01rem #1976d2f0;
+}
+
+.p_btn_wrapper {
+    padding: 1rem;
+}
+
+.p_btn_wrapper .btn {
+    margin: 0.2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+/* Footer Exclusive CSS Styling - for Mobile */
+
+footer {
+    border-bottom: 0.1rem solid #1976d2;
+}
+
+.flink_container {
+    padding: 0.3rem 0;
+    text-indent: 1rem;
+    border-top: 0.1rem solid #1976d2;
+}
+
+.flink_container a {
+    padding: 0.4rem;
+}
+
+
+/* Product Individual Exclusive Styles */
+
+.products {
+    padding: 0.1rem;
+    text-align: center;
+}
+
+.p_image>*,
+.p_details>* {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.p_image img {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.p_image a {
+    margin: 0.5rem 1rem;
+}
+
+
+/* Order Styles */
+
+.owrapper {
+    margin: 1rem auto;
+}
+
+.order {
+    text-align: center;
+}
+
+.o_card img {
+    width: 10rem;
+}
+
+.o_card div {
+    padding: 0.5rem 1rem;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.o_details {
+    display: block;
+    margin: 1rem 0;
+}
+
+.o_details span {
+    display: block;
+    padding: 0.5rem 0.3rem;
+}
+
+
+/* Profile Styles */
+
+.profile {
+    margin: 1rem;
+}
+
+
+/* Profile Styling */
+
+.pro_img {
+    margin: 1rem 0;
+    text-align: center;
+    display: block;
+}
+
+.pro_img img {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    border: 0.1rem solid inherit;
+    border-radius: 5rem;
+    display: block;
+}
+
+.pro_img a {
+    padding: 0.3rem 2rem;
+    margin: 2rem;
+    display: inline-block;
+}
+
+.pro_details {
+    display: block;
+    text-align: center;
+}
+
+.pro_details span {
+    display: block;
+    margin: 0.5rem;
+}
+
+.pro_name {
+    font-size: 1.2rem;
+}

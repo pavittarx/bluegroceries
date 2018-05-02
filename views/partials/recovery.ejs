@@ -1,0 +1,39 @@
+<.if(status==='start'){ .>
+<p id="msgbox" style="display:none" class="message green"> </p>
+<section class="form_wrapper">
+    <form id="form" class="form_container recovery" method="post">  
+        Please provide details for an account you wish to recover. 
+        <span id="username"> </span>
+        <input name="username" type="text" placeholder="Email/Username">
+        <button class="btn" onclick="submitform(event,'.recovery','post','/recovery')">
+            Recover </button>
+    </form>
+</section>
+<.} .>
+
+<.if(status==='verified'){ .>
+<p id="msgbox" style="display:none" class="message green"> </p>
+<section class="form_wrapper">
+    <form id="form" class="form_container recovery" method="post">  
+        Please input a password of your choice.
+        <span id="password"> </span>
+        <input name="password" type="text" placeholder="New Password">
+        <span id="cpassword"> </span>
+        <input name="cpassword" type="text" placeholder="Confirm Password">
+        <button class="btn" onclick="submitform(event,'.recovery','post','/recovery/<.=key .>')">
+            Reset Password </button>
+    </form>
+</section>
+<.} .>
+
+<.if(status==='expired'){ .>
+<section class="recovery-error">
+<i class="material-icons warning red" style="font-size:4rem;"> </i>
+            <h1 class="red"> Expired! </h1>
+            <p class="errormsg raise2x">
+                The link you are trying to use has been expired, Please create a new one.
+            </p>
+            <a href="/recovery" class="btn btn_set">Generate </a>
+</section>
+<.} .>
+

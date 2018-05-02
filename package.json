@@ -1,0 +1,38 @@
+{
+  "name": "bluegroceries",
+  "version": "1.0.0",
+  "description": "Online Grocery Store (ECommerce) Project",
+  "main": "app.js",
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-mysql-session": "^1.2.3",
+    "express-session": "^1.15.6",
+    "mailgun-js": "^0.17.0",
+    "mysql": "^2.15.0",
+    "npm": "^5.8.0",
+    "stripe": "^5.5.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pavittarx",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavittarx/bluegroceries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pavittarx/bluegroceries/issues"
+  },
+  "homepage": "https://github.com/pavittarx/bluegroceries#readme"
+}

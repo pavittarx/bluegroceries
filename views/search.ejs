@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<.-include partials/head.ejs.>
+</head>
+
+<body>
+<. if(!user){ username =null }else {username = user[0].username} .>
+
+
+    <.-include partials/nav-phone.ejs {user:user, cat:cat,cart:cart}.>
+    <header>
+    <.-include partials/header.ejs {user:user,cart:cart} .>
+    </header>
+    <main>
+    <.-include partials/nav-pc.ejs , {user:user} .>
+        <section class="main">
+        <section class="pwrapper">
+        <. if(prod.length){ 
+            prod.forEach((data)=>{ .>
+        <.- include('partials/p-cards.ejs',{prod:data, username:username}); .>
+        <. }); } 
+                else {.>
+        <p class="message green"> No Products matching your search </p>
+        <. } .> 
+        </section>
+        </section>
+    </main>
+    <div class="seprator">Blue Groceries</div>
+    <footer>
+    <.- include partials/footer.ejs .>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+   .
+   |-app_modules
+   |+assests
+   |---css
+   |---icons
+   |---images
+   |---js
+   |-config
+   |-modules
+   |-test
+   |-views
+   |---partials
+
+

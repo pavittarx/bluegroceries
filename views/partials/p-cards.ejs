@@ -1,0 +1,27 @@
+<a href="/products/view/<.=prod.id .>">
+    <div class="cards round2 prodcard">
+        <div class="pimage">
+            <img src="<.=prod.image .>"> </div>
+        <div class="pdesc">
+            <a href="/products/view/<.=prod.id .>">
+                <span class="pname">
+                         <.=prod.name .>
+                </span>
+            </a>
+            <span class="pprice"> M.R.P.
+                <.=prod.price .>
+            </span>
+            <span class="pstock shrink"> (
+                <.=prod.stock .> in stock) </span>
+        </div>
+        <div class="p_btn_wrapper">
+            <. if(!username) { .>
+                <a class="btn csr" onclick="toggleexpander(1)"> Buy </a>
+                <a class="btn csr" onclick="toggleexpander(1)">Add to Cart</a>
+                <. }else{ .>
+                    <a class="btn" href="<.=username .>/buy/<.=prod.id .>"> Buy </a>
+                    <a class="btn csr" onclick="makereq('put','/<.=username .>/cart',{prodId:<.=prod.id .>})">Add to Cart</a>
+            <. } .>
+        </div>
+    </div>
+</a>

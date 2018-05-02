@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+  <.-include partials/head.ejs.>
+    <link rel="stylesheet" href="/assests/css/stripe.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+  <.-include partials/nav-phone.ejs {user:user, cat:cat,cart:cart}.>
+    <header>
+      <.-include partials/header.ejs {user:user,cart:cart} .>
+    </header>
+    <main>
+      <.-include partials/nav-pc.ejs , {user:user} .>
+        <section class="main">
+        <. if(order.length){.>
+        <.-include partials/order-summary.ejs , {order:order,amount:amount, formAction:formAction} .>
+        <.}else{.>
+        <p class="message green"> There are currently no pending orders from you. 
+        Please choose some products you wish to buy. </p>
+        <.} .>
+        </section>
+    </main>
+    <div class="seprator">Blue Groceries</div>
+    <footer>
+      <.- include partials/footer.ejs .>
+    </footer>
+
+    <script src="/assests/js/stripe-elements.js"></script>
+</body>
+
+</html>

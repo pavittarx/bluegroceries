@@ -1,0 +1,60 @@
+<section class="checkout">  
+<section class="summary">
+    <table>
+      <tr>
+        <th> Name </th>
+        <th> Quantity </th>
+        <th> Price </th>
+        <th> Discount</th>
+      </tr>
+      <. order.forEach((order)=>{
+        .>
+      <tr>
+          <td>
+            <.=order.name .>
+          </td>
+          <td>
+            <.=order.quantity .>
+          </td>
+          <td>
+            <.=order.pPrice .>
+          </td>
+          <td>
+            <.=order.discount .>%
+          </td>
+        </tr>
+        <.}).>
+        <tr id="total">
+        <td> Total </td>
+        <td> </td>
+        <td><.=amount.total .></td>
+        <td><.=amount.discount .></td>
+        </tr>
+        <tr id="charges">
+        <td>Delivery Charges</td>
+        <td> </td>
+        <td><.=amount.charge .></td>
+        <td> </td>
+        </tr>
+        <tr id="net">
+        <td>Net Amount </td>
+        <td> </td>
+        <td><.=amount.net .></td>
+        <td> </td>
+        </tr>
+        </table>
+
+  </section>
+
+  <section class="stripe_form_wrapper">
+    <form id="stripe-form" class="stripe_form_container" method="post" action="<.=formAction .>">
+      <input id="name" type="text" placeholder="Name" required>
+      <div id="card-number">
+      </div>
+      <div id="card-expiry" class="stripe_break"></div>
+      <div id="card-cvc" class="stripe_break"></div>
+      <div id="stripe-error" class="err"></div>
+      <button class="btn"> Pay </button>
+    </form>
+  </section>
+</section>

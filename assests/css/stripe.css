@@ -1,0 +1,61 @@
+/* A stylesheet for styling Stripe Elements, so they do not interfere with styles of other elements on the site. */
+.stripe_form_wrapper{
+    background-image: url("/assests/images/seamless-pattern.jpg");
+    padding:0.5rem;
+    
+}
+
+/* Set Base Styles for Stripe Input elements*/
+.stripe_form_container{
+    background: #ffffffef;
+    width:70%;
+    margin:2rem auto;
+    padding:1rem;
+    border:0.1rem solid #1976d2;
+}
+
+.stripe_form_container input{
+    background-color:#ffffff00;
+    margin-bottom:0;
+}
+
+.stripe_form_container input, .stripe_base {
+    width:70%;
+    padding:0.3rem;
+    margin-bottom:0.7rem;
+    box-shadow: 0 0 0.2rem #454545c0;
+    transition: 0.2s all linear;
+}
+
+.stripe_form_container input:focus,.stripe_focus {
+    color: initial;
+    box-shadow: 0 0.2rem 0.1rem -0.1rem #1976d2a0;
+}
+
+.stripe_form_container input:invalid,.stripe_invalid {
+    box-shadow: 0 0.2rem 0.1rem -0.1rem #ff0000ff;
+}
+
+.stripe_form_container input:valid,.stripe_complete{
+    color:#00e678;
+    box-shadow: 0 0.2rem 0.1rem -0.1rem #00e676;
+}
+
+.stripe_form_container input:placeholder-shown, .stripe_empty{
+    color:inherit;
+    box-shadow: 0 0 0.2rem #454545c0;
+}
+
+.stripe_break{
+    display: inline-block;
+    width:2.7rem;
+    margin-right:0.5rem;
+}
+
+.stripe_form_container button {
+        color: #1976d2;
+        background-color: #ffd13b;
+        padding: 0.5rem 1.5rem;
+        margin: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }

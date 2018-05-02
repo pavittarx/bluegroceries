@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assests/reset.css">
+    <link rel="stylesheet" href="assests/main.css">
+    <link rel="stylesheet" href="assests/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Unica+One" rel="stylesheet">
+    <link rel="stylesheet" href="assests/icons/micons.css">
+    <link rel="stylesheet" media="screen and (min-width: 500px)" href="assests/mainpc.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="assests/mainphone.css">
+
+    <script src="assests/main.js"></script>
+</head>
+
+<body>
+    <nav id="sidebar" class="pchide">
+        <section class="barlogo">
+            <span id="logo">Blue Groceries</span>
+            <i class="csr material-icons close" onclick="toggle(0)"></i>
+        </section>
+        <section class="navlinks">
+            <a class="btn" href="/login"> Login </a>
+            <a class="btn" href="/signup">Sign Up</a>
+        </section>
+        <!--section class="userinfo">
+            <a href="/profile">Stuart Elkeino</a><br/><br/>
+            <a href="/orders">Orders</a>
+            <a href="/cart">Cart(30)</a>
+        </section-->
+        <div class="seprator"> Categories </div>
+        <section class="categories">
+            <a href="/cat/1"> KitchenWare </a>
+            <a href="/cat/2">Snacks</a>
+            <a href="/cat/3"> Fruits </a>
+            <a href="/cat/4"> Beverages</a>
+            <a href="/cat/5">Dry Fruits</a>
+        </section>
+    </nav>
+    <header>
+        <section class="bar">
+            <i class="pchide csr material-icons menu" onclick="toggle(1)"></i>
+            <span id="logo">Blue Groceries </span>
+            <span class="mhide userlinks">
+                <a class="/signup">
+                    <i class="material-icons lock"></i> Login </a>
+                <a class="/login">
+                    <i class="material-icons createac"></i> Sign up </a>
+            </span>
+        </section>
+        <section class="headerspace">
+            <span class="mhide">
+                <span class="shrink">Everything delivered at your doorstep.</span>
+                <!--a href="/orders"> Orders </a>
+                <a href="/cart"> Cart</a-->
+            </span>
+            <form action="/search">
+                <input name="search" type="text" placeholder="Search">
+                <input class="material-icons" type="submit" value="&#xe8b6">
+            </form>
+        </section>
+    </header>
+    <main>
+        <nav class="mhide navigator">
+            <a href="/cat/1"> Fruits</a>
+            <a href="/cat/1"> Dry Fruits</a>
+            <a href="/cat/1"> Kitchenware</a>
+            <a href="/cat/1"> Snacks</a>
+            <a href="/cat/1"> Beverages</a>
+        </nav>
+        <section class="main"></section> 
+        <!--section class="pwrapper">
+            <a href="/product/id"><div class="cards round2 prodcard">
+                <div class="pimage"><img src="assests/images/apple.png"> </div>
+                <div class="pdesc">
+                    <a href="/product/id"><span class="pname">Apple</span></a>
+                    <span class="pprice"> M.R.P. 20 </span>
+                    <span class="pstock shrink"> (200 in stock)  </span>
+                </div>
+                <div class="p_btn_wrapper">
+                    <a class="btn" href="/buy/prodID"> Buy </a><a class="btn" href="/cart/prodID">Add to Cart</a>
+                </div>
+            </div> </a>
+        </section-->
+        <!--section class="products">
+                    <div class="p_image">
+                        <img src="assests/images/apple.png">
+                        <span class="p_name"> Apples </span>
+                        <a class="btn" href=""> Buy Now </a>
+                        <a class="btn" href=""> Add to Cart </a>
+                    </div>
+                    <div class="p_details">
+                        <span class="p_price"> M.R.P. 20 (2% off) </span>
+                        <span class="p_extra"> 0.35 Kg </span>
+                        <span class="p_stock"> 200 in Stock </span>
+                        <span class="p_delivery">Delivery to be expected in 3 hours</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat tellus, placerat non tempor non, mollis et eros.
+                            Aliquam egestas velit eget posuere tincidunt. Aenean vel nibh ultrices, euismod lectus sed, lobortis
+                            sapien. Vestibulum nulla lectus, lacinia ac quam sit amet, ornare dignissim neque. Donec semper cursus
+                            mi, ut dictum lacus scelerisque vitae. Ut feugiat libero ut felis maximus, vel vestibulum nunc dictum.
+                            Nullam vulputate lectus vel sapien porta, at fringilla nunc ornare. Ut imperdiet aliquet nisl vitae auctor.
+                            Etiam vel nulla vitae sem rutrum interdum ut at erat.
+                        </p>
+                        <span class="p_append">
+                            Available at : Store 1, Store 2, Store 3
+                        </span>
+                    </div>
+                </section-->
+        <!--section class="f_wrapper">
+            <form class="login" method="post">
+                <span> </span>
+                <input name="username" type="text" placeholder="Email/Username">
+                <span> </span>
+                <input name="password" type="password" placeholder="Password">
+                <button class="btn" onclick="submitf(event,'.login','PUT','/login')">
+                    Login </button> 
+            </form>
+        </section-->
+        <!--section class="f_wrapper">
+            <form class="signup" method="post">
+                <span> </span>
+                <input name="fName" type="text" placeholder="First Name">
+                <span> </span>
+                <input name="lName" type="text" placeholder="Last Name">
+                <span> </span>
+                <input name="email" type="email" placeholder="Email">
+                <span> </span>
+                <input name="username" type="text" placeholder="Username">
+                <span> </span>
+                <input name="password" type="password" placeholder="Password">
+                <span> </span>
+                <input name="cpassword" type="password" placeholder="Confirm Password">
+                <button class="btn" onclick="submitf(event,'.signup','post','/signup')">
+                    Sign Up
+                </button>
+            </form>
+        </section-->
+        <!--div class="owrapper">
+            <div class="order">
+                <span class="o_card">
+                    <img src="assests/images/apple.png">
+                    <div class="btn csr" onclick="xhrsend('DELETE','/orders/id',' ')"> 
+                        Cancel </div>
+                </span>
+                <span class="o_details">
+                    <span class="o_id"> #123345</span>
+                    <span class="o_name"> Apples </span>
+                    <span class="o_price"> Price : 20</span>
+                    <span class="o_quantity">Quantity : 200</span>
+                    <span class="o_net"> Order Total : 4000</span>
+                    <span class="o_delivery"> expected in 3 hours (Delivered)</span>
+                </span>
+            </div>
+        </div -->
+        
+        <!-- (Password Change) section class="profile">
+              <form class="pass_change" method="post">
+                  Change Password 
+                    <input name="password" type="text" placeholder="Old Password">
+                  <input name="password" type="text" placeholder=" New Password">
+                  <input name="cfpassword" type="text" placeholder="Confirm Password">
+                  <button class="btn" onclick="submitf(event,'.pass_change','put','/user/password')"> Change </button>                
+                </form>
+        </section-->
+        <!-- (Edit) section class="profile">
+            <form class="pro_form" method="post" enctype=multipart/form-data>
+                Only input the Values you wish to change. <br/><br/>    
+                <span></span>
+                    <input name="fName" type="text" placeholder="Pavittar">
+                    <span></span>
+                    <input name="lName" type="text" placeholder="Singh">
+                    <span></span>
+                    <input name="email" type="email" placeholder="pavittars1@gmail.com">
+                    <span> </span>
+                    <input name="phone" type="text" placeholder="9012090666">
+                    <span></span>
+                    <input name="street" type="text" placeholder="Hudson Street">
+                    <span></span>
+                    <input name="block" type="text" placeholder="Storyblock">
+                    <span></span>
+                    <input name="city" type="text" placeholder="Starling City" disabled>
+                    <span> </span>
+                    <input name="Zip" type="text" placeholder="09227" disabled>
+                    <span></span>
+                    <label for="picture"><i class="material-icons image"></i> Change </label>
+                    <input id="picture" name="image" type="file">
+                    <button class="btn" onclick="submitf(event,'.pro_form','put','/profile')"> Save </button>
+            </form>
+        </section-->
+        <!--section class="profile">
+                <span class="pro_img">
+                    <img src="assests/images/profile.png">
+                    <a class="btn" href="/profile/edit">
+                        Edit  <i class="material-icons edit"></i></a>
+                </span>
+                <span class="pro_details">
+                    <span class="pro_name">Pavittar Singh
+                        <i class="shrink"> (Customer) </i>
+                    </span>
+                    <span class="pro_mobile">
+                        <i class="material-icons phone"></i> +91-9012090666</span>
+                    <span class="pro_email">
+                        <i class="material-icons mail"></i> pavittars1@gmail.com </span>
+                    <span class="pro_address">
+                        <i> Hudson Street, </i>
+                        <i> Storyblock </i>
+                        <br/>
+                        <i> Starlink City </i>
+                        <br/>
+                        <i> 09227 </i>
+                    </span>
+                </span>
+        </section-->  
+    </main>
+    <div class="seprator">Blue Groceries</div>
+    <footer>
+        <div class="flink_container">
+            <a href="/about">About Us</a>
+            <a href="/careers">Careers</a>
+            <a href="/stores">Our Stores</a>
+
+        </div>
+        <div class="flink_container">
+            <a href="https://facebook.com/page_not_found">Facebook</a>
+            <a href="https://twitter.com/page_not_found">Twitter</a>
+            <a href="/support">Support/Feedback</a>
+        </div>
+        <div class="flink_container">
+            <a href="/sponsor">Sell</a>
+            <a href="/advertise">Advertise </a>
+            <a href="/tos">Terms Of Service</a>
+        </div>
+    </footer>
+</body>
+
+</html>

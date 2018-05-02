@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <.- include partials/head.ejs .>
+</head>
+
+<body>
+    <.-include partials/nav-phone.ejs {user:user, cat:cat}.>
+        <header>
+
+            <.-include partials/header.ejs .>
+        </header>
+        <main>
+            <.-include partials/nav-pc.ejs , {user:user, cat:cat} .>
+                <section class="main">
+                            <.-include partials/login.ejs .>
+                </section>
+        </main>
+        <div class="seprator">Blue Groceries</div>
+        <footer>
+        <.- include partials/footer.ejs .>
+        </footer>
+</body>
+
+</html>

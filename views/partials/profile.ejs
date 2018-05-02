@@ -1,0 +1,29 @@
+<section class="profile">
+    <span class="pro_img">
+        <img src="<.=user[0].image .>" alt="No Image">
+        <a class="btn" href="/profile/edit">
+            Edit
+            <i class="material-icons edit"></i>
+        </a>
+    </span>
+    <span class="pro_details">
+        <span class="pro_name"> <.=user[0].fName .> <.=user[0].lName .>
+                    <.if(role) { .>
+                        <i class="shrink"> (
+                            <.=role .>) </i>
+                        <. } .>
+        </span>
+        <span class="pro_mobile">
+            <i class="material-icons phone"></i> +91-<.=user[0].phone .></span>
+        <span class="pro_email">
+            <i class="material-icons mail"></i> <.=user[0].email .> </span>
+        <span class="pro_address">
+            <i> <.=address[0].street .>, </i>
+            <i> <.=address[0].block .> </i>
+            <br/>
+            <i> <.=address[0].city .> </i>
+            <br/>
+            <i> <.=address[0].zip .> </i>
+        </span>
+    </span>
+</section>

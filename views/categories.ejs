@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <.- include partials/head.ejs .>
+</head>
+
+<body>
+    <.-include partials/expander.ejs .>
+    <.-include partials/nav-phone.ejs {user:user, cat:cat,cart:cart}.>
+        <header>
+            <.-include partials/header.ejs {user:user,cart:cart} .>
+        </header>
+        <main>
+            <.-include partials/nav-pc.ejs , {user:user} .>
+                <section class="main">
+                    <section class="pwrapper">
+                    <. if(!user){ .>
+                        <. prod.forEach((data)=>{ .>
+                            <.- include('partials/p-cards.ejs',{prod:data, username:null}); .>
+                        <. }); }else{ 
+                             prod.forEach((data)=>{ .>
+                        <.- include('partials/p-cards.ejs',{prod:data, username:user[0].username}); .>
+                        <. });
+                    } .>
+                    </section>
+                   <.-include partials/pagination.ejs , {pagination:pagination} .>
+                </section>
+        </main>
+        <div class="seprator">Blue Groceries</div>
+        <footer>
+        <.- include partials/footer.ejs .>
+        </footer>
+</body>
+
+</html>

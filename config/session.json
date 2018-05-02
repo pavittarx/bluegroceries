@@ -1,0 +1,13 @@
+{
+    "name": "bluegroceries",
+    "secret": "misecret",
+    "resave": false,
+    "rolling": true,
+    "saveUninitialized": true,
+    "cookie": {
+        "secure": false,
+        "httpOnly": true,
+        "maxAge": null,
+        "domain": "127.0.0.1"
+    }
+}

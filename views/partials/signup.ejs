@@ -1,0 +1,29 @@
+<section class="form_wrapper">
+    <form class="form_container signup" method="post">
+        <span id="fName"> </span>
+        <input name="fName" type="text" placeholder="First Name">
+        <span id="lName"> </span>
+        <input name="lName" type="text" placeholder="Last Name">
+        <span id="phone"> </span>
+        <input name="phone" type="text" placeholder="Phone"> <br/>
+        <span id="email"> </span>
+        <input name="email" type="email" placeholder="Email">
+        <span id="username"> </span>
+        <input name="username" type="text" placeholder="Username">
+        <span id="password"> </span>
+        <input name="password" type="password" placeholder="Password">
+        <span id="cpassword"> </span>
+        <input name="cpassword" type="password" placeholder="Confirm Password"> <br/>
+        <span id="street"> </span>
+        <input name="street" type="text" placeholder="Street">
+        <span id="block"> </span>
+        <input name="block" type="text" placeholder="Block">
+        <span id="city"> </span>
+        <input name="city" type="text" placeholder="City" value="Starling City" disabled>
+        <span id="Zip"> </span>
+        <input name="zip" type="text" placeholder="Zip" value="09227" disabled>
+        <button class="btn" onclick="submitform(event,'.signup','post','/signup')">
+            Sign Up
+        </button>
+    </form>
+</section>

@@ -1,0 +1,4 @@
+{
+    "publickey":"",
+    "comment":"This is Stripe public key used to tokenize, the payment infromation provided by user."
+}

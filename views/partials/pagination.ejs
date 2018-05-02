@@ -1,0 +1,8 @@
+<section class="pagination">
+                   <.if (pagination.prev!=null) {.> <a href="/<.=url .>/<.=pagination.prev .>"> Prev </a> <. }  .>
+                   <. for(let i in pagination.index){ .>
+                    <a href="/<.=pagination.url .>/<.=pagination.index[i] .>"> <.=pagination.index[i] .> </a>
+                    <.}.>
+                    <.if (pagination.next!=null) {.> <a href="/<.=url .>/<.=pagination.next .>"> Next </a> <. }  .>
+                       
+                   </section>

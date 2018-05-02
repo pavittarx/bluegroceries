@@ -1,0 +1,187 @@
+/* This stylesheet contains common CSS Styles shared by both mainpc.css & mainphone.css, also, some Global styles that may be need not to be redefined, for every element independently. */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', 'sans-serif';
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.main{
+    flex:1;
+}
+
+main {
+    min-height: 64%;
+}
+
+a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+form,
+input {
+    /*  Scrapping off unwanted styles from <form> elements, to better suit the site. */
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+    caret-color: #1976d2;
+}
+
+form span {
+    /* For Error Reporting */
+    color: #ff0000f0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='submit'] {
+    color: #1976d2;
+}
+
+button {
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#logo {
+    font-family: 'Unica One';
+}
+
+.bar {
+    /* Styles for the logobar, inside <header> */
+    color: #ffffffff;
+    background-color: #1976d2;
+}
+
+.headerspace input {
+    /* Controls Search bar <form> aligninig */
+    vertical-align: middle;
+    transition: 0.2s border-bottom linear;
+}
+
+.headerspace input:focus {
+    padding-bottom: 0.25rem;
+    border-bottom: 0.1rem solid #1976d2;
+}
+
+
+/* Common Styles for Product Cards , in Mobile & Web View */
+
+.pwrapper {
+    display: flex;
+}
+
+.prodcard {
+    text-align: center;
+}
+
+.pimage img {
+    width: 150px;
+}
+
+.pname {
+    /* Product Name in Cards */
+    margin: 0.3rem 0;
+    display: block;
+    text-align: center;
+    line-height: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Common Styles for Footer */
+
+footer {
+    background-color: #064887;
+}
+
+.flink_container a {
+    color: #ffffffea;
+    display: block;
+}
+
+.flink_container a:hover {
+    color: #ffffffa0;
+}
+
+.expansion {
+    display: none;
+    background-color: #0000008c;
+    height: 100%;
+    width: 100%;
+    padding: 20% 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+
+.message {
+    width: 12rem;
+    background-color: #fffffffa;
+    border: 0.3rem solid #1976d1da;
+    border-radius: 0.5rem;
+    display: inline-block;
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.message a {
+    display: block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffd13b;
+    color: #1976d2;
+}
+
+.xclose {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: #fff;
+}
+
+/* Pagination Styling */
+
+.pagination{
+    margin:1rem 1.5rem;
+    text-align:right;
+}
+
+.pagination a{
+    color:#353535;
+    margin:0.1rem;
+    padding:0.3rem;
+    border:0.1rem solid #1976d2ea;
+    transition: 0.2s all linear;
+ 
+}
+
+.pagination a:hover{
+    color:#1976d2;
+    background-color: #ffd13b;
+    padding:0.4rem;
+    border:0;
+}

@@ -1,0 +1,211 @@
+/* A set of custom style classes, that can be used throughout the site, in order to avoid rewriting the styles over and over. */
+.vm {
+    vertical-align: middle;
+}
+
+.csr {
+    cursor: pointer;
+}
+
+.err {
+    color: #e81123c0;
+}
+
+.seprator {
+    color: #fffffffa;
+    background-color: #0863bb;
+    padding: 0.2rem;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.shrink {
+    font-size: 0.75em;
+}
+
+.shrink2x {
+    font-size: 0.5em;
+}
+
+.raise {
+    font-size: 1.2em;
+}
+
+.raise2x {
+    font-size: 1.5em;
+}
+
+.raise3x {
+    font-size: 2.5rem;
+}
+
+.btn {
+    color: #fffffa;
+    background-color: #1972fa;
+    transition: 0.5s box-shadow linear;
+    outline: none;
+}
+
+.btn_set{
+    margin:1rem 0;
+    padding:0.5rem 1.5rem;
+    font-size: 0.8rem;
+}
+
+.btn:hover {
+    color: #1972ff;
+    border: 0.1rem solid #1972ff;
+    background-color: #fffffffa;
+}
+
+.btn_wrapper{
+padding: 1.5rem;
+}
+
+.btn_wrapper a{
+    margin: 0 0.2rem;
+    padding: 0.25rem 0.4rem;
+}
+
+.round {
+    border-radius: 1rem;
+}
+
+.round2 {
+    border-radius: 0.3rem;
+}
+
+.cards {
+    max-width: 200px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 0.1rem solid #1972fa;
+}
+
+@media all and (min-width:500px) {
+    .btn:hover {
+        border: 0;
+        box-shadow: 0 0 0.2rem #fff, 0 0 0.3rem #454545a2;
+    }
+    .btn:active {
+        box-shadow: 0 0 0.1rem #1976d2f0;
+    }
+}
+
+.message{
+    width:80%;
+    margin:1rem auto;
+    display: block;
+    border:0.1rem solid #1976d2;
+}
+
+.green {
+    color: #00cc6a;
+}
+
+.red {
+    color: #e81123;
+}
+
+.bggreen {
+    background-color: #00cc6a;
+    color:#ffffffcc;
+}
+
+.bgred {
+    background-color: #e81123;
+    color:#ffffffcc;
+}
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Form Styles */
+.form_container {
+    text-align: center;
+}
+
+.form_container input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    transition: 0.3s all linear;
+}
+
+.form_container input:focus {
+    border-bottom: 0.1rem solid #1976d2;
+}
+
+.form_container button {
+    padding: 0.5rem 1.5rem;
+}
+
+.form_container label {
+    margin: 1rem;
+    color: #1976d2;
+    display: block;
+}
+
+.form_container input[type="file"] {
+    display: none;
+}
+
+@media only screen and (min-width:768px) {
+    .form_wrapper {
+        background-image: url("/assests/images/cookery.gif");
+        text-align: center;
+    }
+    .form_container {
+        background: #ffffffaa;
+        display: inline-block;
+        max-width: 13rem;
+        margin: 8rem 0;
+        padding: 1.5rem;
+        border: 0.1rem solid #1976d2;
+        border-radius: 0.5rem;
+    }
+    .form_container input {
+        display: block;
+        font-size: 0.8rem;
+        margin: 1em auto;
+        padding: 0.3rem 0.5rem;
+        box-shadow: 0 0 0.2rem #454545c0;
+        transition: 0.2s all linear;
+    }
+    .form_container input:focus {
+        box-shadow: 0 0.2rem 0.1rem -0.1rem #1976d2a0;
+    }
+    .form_container button {
+        color: #1976d2;
+        background-color: #ffd13b;
+        padding: 0.5rem 1.5rem;
+        margin: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
+    .form_container label {
+        color: #fff;
+        background-color: #1976d2;
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        display: initial;
+    }
+}
+
+
+/* Resets the Form */
+
+.form_reset {
+    background: initial;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.form_reset input {
+    padding: 0;
+    margin: 0;
+    width: initial;
+}

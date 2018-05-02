@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<.-include partials/head.ejs.>
+</head>
+
+<body>
+    <.-include partials/nav-phone.ejs {user:user, cat:cat,cart:cart}.>
+    <header>
+    <.-include partials/header.ejs {user:user,cart:cart} .>
+    </header>
+    <main>
+    <.-include partials/nav-pc.ejs , {user:user} .>
+        <section class="main">
+        <section class="process">
+        <section class="order_btn_set"> 
+        <a href="/<.=username .>/orders/active"> Active </a>
+        <a href="/<.=username .>/orders/pending"> Pending </a>
+        <a href="/<.=username .>/orders/delivered"> Delivered </a>
+        <a href="/<.=username .>/orders/cancelled"> Cancelled </a>
+        </section>
+        <. if(order.length){ .>
+        <.-include partials/orders.ejs , {prod:prod, address:address,order:order} .>
+        <. }else{ .>
+        <p class="message green"> 
+        You currently have no orders in this section.
+        </p>
+        <.} .>
+        </section>
+         </section>
+    </main>
+    <div class="seprator">Blue Groceries</div>
+    <footer>
+    <.- include partials/footer.ejs .>
+    </footer>
+</body>
+
+</html>

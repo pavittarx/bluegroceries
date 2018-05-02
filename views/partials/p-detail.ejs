@@ -1,0 +1,25 @@
+<. for(let i in prod){ .>
+<section class="products">
+    <div class="p_image">
+        <img src="<.=prod[i].image .>">
+        <span class="p_name"> <.=prod[i].name .> </span>
+        <. if(!username) { .>
+                <a class="btn csr" onclick="toggleexpander(1)"> Buy </a>
+                <a class="btn csr" onclick="toggleexpander(1)">Add to Cart</a>
+                <. }else{ .>
+                    <a class="btn" href="<.=username .>/buy/<.=prod.id .>"> Buy </a>
+                    <a class="btn csr" onclick="makereq('put','/<.=username .>/cart',{prodId:<.=prod.id .>})">Add to Cart</a>
+            <. } .>
+    </div>
+    <div class="p_details">
+        <span class="p_price"> M.R.P. <.-prod[i].price-prod[i].discount .> (<.=prod[i].discount .>% off) </span>
+        <span class="p_extra"> <.=prod[i].capacity .> <.prod[i].weight .> </span>
+        <span class="p_stock"> <.prod[i].stock .> in Stock </span>
+        <span class="p_delivery">Delivery to be expected in <.prod[i].delivery .></span>
+        <p>
+        <.=prod[i].description .>
+        </p>
+    </div>
+</section>
+
+<. } .>

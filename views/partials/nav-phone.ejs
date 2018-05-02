@@ -1,0 +1,25 @@
+<nav id="sidebar" class="pchide">
+    <section class="barlogo">
+        <span id="logo">Blue Groceries</span>
+        <i class="csr material-icons close" onclick="toggle(0)"></i>
+    </section>
+    <.if(user==null){.>
+    <section class="navlinks">
+        <a class="btn" href="/login"> Login </a>
+        <a class="btn" href="/signup">Sign Up</a>
+    </section>
+    <. } else {.>
+    <section class="userinfo">
+            <a href="/profile"><.=user[0].fName .> <.=user[0].lName .></a><br/><br/>
+            <a href="/orders">My Orders</a>
+            <a href="/cart">Cart(<.=cart .>)</a>
+        </section>
+    <.}.>
+    <div class="seprator"> Categories </div>
+    <section class="categories">
+        <. for(var i in cat){ .>
+            <a href="/cat/<.=cat[i].id .>">
+                <.=cat[i].name .>
+            </a>
+            <. } .>
+</nav>

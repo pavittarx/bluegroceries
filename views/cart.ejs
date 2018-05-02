@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <.- include partials/head.ejs .>
+</head>
+
+<body>
+    <.-include partials/nav-phone.ejs {user:user, cat:cat,cart:cart}.>
+        <header>
+            <.-include partials/header.ejs {user:user,cart:cart} .>
+        </header>
+        <main>
+            <.-include partials/nav-pc.ejs , {user:user} .>
+                <section class="main">
+                <div class="p_btn_wrapper center">  <a class="btn" href="/<.=user[0].username .>/process"> Proceed to Order </a> </div>
+                    <section class="pwrapper">
+                        <. prod.forEach((data)=>{ .>
+                            <.- include('partials/cart-cards.ejs',{prod:data, username:user[0].username}); .>
+                        <. }); .>
+                    </section>
+                </section>
+        </main>
+        <div class="seprator">Blue Groceries</div>
+        <footer>
+        <.- include partials/footer.ejs .>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<a href="/product/<.=prod.id .>">
+    <div class="cards round2 prodcard">
+        <div class="pimage">
+            <img src="<.=prod.image .>"> </div>
+        <div class="pdesc">
+            <a href="/product/">
+                <span class="pname">
+                    <.=prod.name .>
+                </span>
+            </a>
+            <span class="pprice"> M.R.P.
+                <.=prod.price .>
+            </span>
+            <span class="pstock shrink"> (
+                <.=prod.stock .> in stock) </span>
+        </div>
+        <div class="p_btn_wrapper">
+            <a class="btn" href="products/buy/<.=prod.id .>"> Buy </a>
+            <a class="btn csr" onclick="makereq('delete','/<.=username .>/cart',{prodId: <.=prod.id .>})"> Remove </a> 
+        </div>
+    </div>
+</a>

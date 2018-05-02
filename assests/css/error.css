@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+html {
+    font-size: 20px;
+}
+
+body {
+    color: #555555;
+    font-family: 'Garamond';
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    color: #ffffffea;
+    background-color: #1976d2;
+    font-family: 'Unica One', sans-serif;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.ewrapper {
+    /* background-color: #1976d2; */
+    padding: 1rem;
+    padding-top: 2.5rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+}
+
+.btn {
+    color: #1976d2ea;
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #1976d2da;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    background-color: #1976d2ca;
+    color: #fff;
+}

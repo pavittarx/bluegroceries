@@ -1,0 +1,30 @@
+<section class="profile">
+    <form class="form_container pro_form" method="post" enctype="multipart/form-data">
+        Only input the Values you wish to change.
+        <br/>
+        <br/>
+        <span id="fName"></span>
+        <input name="fName" type="text" placeholder="<.=user[0].fName .>">
+        <span id="lName"></span>
+        <input name="lName" type="text" placeholder="<.=user[0].lName .>">
+        <span id="email"></span>
+        <input name="email" type="email" placeholder="<.=user[0].email .>">
+        <span id="phone" > </span>
+        <input name="phone" type="text" placeholder="<.=user[0].phone .>">
+       <. for(let i in address){ .>
+        <span id="street"></span>
+        <input name="street" type="text" placeholder="<.=address[i].street .>">
+        <span id="block"></span>
+        <input name="block" type="text" placeholder="<.=address[i].block .>">
+        <span id="city"></span>
+        <input name="city" type="text" placeholder="<.=address[i].city .>" disabled>
+        <span id="zip"> </span>
+        <input name="zip" type="text" placeholder="<.=address[i].zip .>" disabled>
+        <. } .>
+        <span id="image"></span>
+        <label for="picture">
+            <i class="material-icons image"></i> Change </label>
+        <input id="picture" name="image" type="file">
+        <button class="btn" onclick="submitform(event,'.pro_form','put','/<.=user[0].username .>/edit')"> Save </button>
+    </form>
+</section>

@@ -1,0 +1,18 @@
+
+<. for(i=0;i<order.length;i++){ .>
+<section class="process_wrapper">
+<section class="process_info">
+        <.-prod [i].name .> (#<.=order[i].id .>)
+        <span class="shrink"> <br/> Quantity <.=order[i].quantity .> </span>
+        <br/> <br/> Delivery Address 
+        <span class="shrink">
+        <br/>  <.=address[i].street .>, <.=address[i].block .> 
+        <br/> <.=address[i].city .> - <.=address[i].zip .> 
+        </span>
+        </section>
+        <span class="process_image">
+        <img class="p_img" src="<.=prod[i].image .>" />
+        </span>
+</section>
+<. } .>
+       
