@@ -24,4 +24,17 @@ Note : The above code line will not work in Powershell, its recommended to use C
 3. Open your browser, and go to 127.0.0.1:9227
 4. You will now be able to use the app. 
 
+## Further Development 
+If you would like to further develop this project,I have provided a ``documentation.pdf`` file, which may help you in further understanding of project. The documentation is  lighter version of the actual project report, i.e, some contents (non-essential) of it have been removed, while the essential parts are still present.
+ 
+## Warning
+
+ The project is no longer maintained, I will not be making any further commits to this project. Meanwhile, the project is free to use or develop further for anyone interested, until it follows original license terms.
+
+## License
+
+MIT ```See License File```
+
+## Author 
+
 Pavittar Singh (157448325)
